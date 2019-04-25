@@ -1,0 +1,29 @@
+<div class="container col-lg-10 centered rounded shadow p-3" style="background-color:rgba(255, 255, 255, 0.945)">
+
+
+  <div class="alert alert-dark" role="alert" *ngIf="throwException == true">
+    Bitte füllen Sie alle Felder aus
+    <button (click)="closeException()" type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+
+  <h2>Kommentare</h2>
+
+    <div class="form-group">
+      <label for="username">Username</label>
+        <input #comment_user id="username" class="form-control" required minLength="2" type="text" placeholder="Name">
+
+      <label for="textarea">Kommentar</label>
+          <textarea #comment_text class="form-control" id="textarea" type="text" placeholder="Kommentar"></textarea>
+    </div>
+    <button class="btn btn-outline-dark" (click)="addComment(comment_user.value, comment_text.value)"
+                                        (click)="comment_text.value=null"
+                                        (click)="comment_user.value=null">Add</button>
+    <button class="btn btn-warning">HttpReq</button>
+</div>
+
+<div *ngFor="let x of comments; let i = index">
+  <app-comment-list [_comment]="x" [index]="i"></app-comment-list>
+</div>

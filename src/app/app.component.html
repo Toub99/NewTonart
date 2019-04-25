@@ -1,0 +1,23 @@
+<div class="mx-auto" [routerLink]="['/startseite']">
+    <img src="../../assets/images/chor2.jpg" class="img-fluid" alt="chor" >
+</div>
+
+
+<app-navbar></app-navbar>
+
+<div class="container-fluid p-4 bg">
+  <p class="invisible">Invisible line for styling purposes</p>
+  <app-login-mask></app-login-mask>
+  <router-outlet></router-outlet>
+  <div class="mb-2 container shadow rounded" style="background-color: rgb(255, 180, 255);">
+    <router-outlet name="carousel">
+    </router-outlet>
+  </div>
+</div>
+
+<footer class="p-2" id="gradient">
+    <p style="color:rgba(255, 255, 255, 0.603)">© Gesangverein Bruderbund Untergrombach 1906
+      <a  class="nav-link" style="color:rgba(255, 255, 255, 0.603)" [routerLink]="['/impressum']">Impressum/DSGVO</a>
+      <a  class="nav-link" style="color:rgba(255, 255, 255, 0.603)" [routerLink]="['/contact']">Kontakt</a>
+    </p>
+</footer>

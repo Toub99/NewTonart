@@ -1,0 +1,43 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="gradient">
+
+        <div>
+          <a class="nav-brand">
+            <img src="../../assets/images/icon.jpg" width=50 height=50 alt="icon" class="rounded" [routerLink]="['/ueber_uns']">
+          </a>
+        </div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav">
+          <li class="nav-item" routerLinkActive="active font-weight-bold">
+            <a class="nav-link" [routerLink]="['/ueber_uns']">Über uns</a>
+          </li>
+
+          <li class="nav-item" routerLinkActive="active font-weight-bold">
+            <a class="nav-link" [routerLink]="['/galerie/']" > Galerie</a>
+          </li>
+
+          <li class="nav-item" routerLinkActive="active font-weight-bold">
+            <a class="nav-link" [routerLink]="['/termine']">Termine</a>
+          </li>
+
+          <li class="nav-item" routerLinkActive="active font-weight-bold">
+            <a class="nav-link" [routerLink]="['/comments']">Gästebuch</a>
+          </li>
+        </ul>
+
+      <div *ngIf="logInTrigger=='false'" class="ml-auto">
+        <img src="../../assets/images/facebook.png" width=40 height=40 alt="icon" class="rounded mx-2">
+        <button class="btn btn-outline-warning ml-auto" type="button" data-toggle="modal" data-target="#exampleModal">Login</button>
+      </div>
+      <div *ngIf="logInTrigger=='true'" class="ml-auto">
+        <img src="../../assets/images/facebook.png" href="" width=40 height=40 alt="icon" class="rounded mx-2">
+        <button class="btn btn-warning" (click)=logout()>Logout</button>
+      </div>
+    </div>
+
+  </nav>

@@ -1,0 +1,7 @@
+.ng-valid[required], .ng-valid[minlength]  {
+  border: 1px solid #00d624
+}
+
+.ng-invalid:not(form) {
+  border: 1px solid #ff0000
+}
