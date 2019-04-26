@@ -23,7 +23,8 @@ import { Carousel2Component } from './carousel2/carousel2.component';
 import { LoginMaskComponent } from './login-mask/login-mask.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginmodalDirective } from './loginmodal.directive';
-import { Carousel0Component } from './carousel0/carousel0.component'
+import { Carousel0Component } from './carousel0/carousel0.component';
+import { TerminModalComponent } from './termin-modal/termin-modal.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { Carousel0Component } from './carousel0/carousel0.component'
     LoginMaskComponent,
     LoginmodalDirective,
     Carousel0Component,
+    TerminModalComponent,
 
   ],
   imports: [

@@ -34,8 +34,10 @@
         <img src="../../assets/images/facebook.png" width=40 height=40 alt="icon" class="rounded mx-2">
         <button class="btn btn-outline-warning ml-auto" type="button" data-toggle="modal" data-target="#exampleModal">Login</button>
       </div>
+
       <div *ngIf="logInTrigger=='true'" class="ml-auto">
-        <img src="../../assets/images/facebook.png" href="" width=40 height=40 alt="icon" class="rounded mx-2">
+        <img src="../../assets/images/facebook.png" href="https://www.facebook.com/TonArtBruderbund/" width=40 height=40 alt="icon" class="rounded">
+        <button class="btn btn-warning mx-2" type="button" data-toggle="modal" data-target="#terminModal">Termin hinzufügen</button>
         <button class="btn btn-warning" (click)=logout()>Logout</button>
       </div>
     </div>

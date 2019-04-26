@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Comment } from './comment.model';
+import { Termin } from './termin.model';
 import { CommentsComponent } from './comments/comments.component';
 
 
@@ -9,6 +10,7 @@ import { CommentsComponent } from './comments/comments.component';
 export class BackendapiService {
   bcomment;
   bcomments = [];
+  btermine = [];
 
   addComment(bcomment: Comment, bcomments: Comment[]) {
     const newComment = {
@@ -21,5 +23,15 @@ export class BackendapiService {
 
   deleteComment(bindex: number) {
     this.bcomments.splice(bindex, 1);
+  }
+
+  addTermin(title, description) {
+    const newTermin = {
+      title: title,
+      description: description
+    };
+    this.btermine.unshift(newTermin);
+    return this.btermine;
+
   }
 }
