@@ -23,7 +23,7 @@ public active = false;
 public throwException = false;
 public i = 0;
 public test;
-apiUrl = 'http://localhost:3000/comments';
+apiUrl = 'http://192.168.178.31:3000/comments';
 
 
   constructor(private backend: BackendapiService, private http: HttpClient) {
@@ -33,7 +33,7 @@ apiUrl = 'http://localhost:3000/comments';
 
   ngOnInit() {
     console.log('moin');
-    // this.getCommentsFromDB();
+    this.getCommentsFromDB();
     document.getElementById('textarea').nodeValue = '';
     this.clearCommentSection.emit(null);
   }
@@ -64,8 +64,6 @@ _comment   */
   public closeException(): void {
     this.throwException = false;
   }
-/**
- *
 
   public async getCommentsFromDB() {
     let i: any;
@@ -73,7 +71,7 @@ _comment   */
     this.http.get(url)
       .subscribe(res => {
         console.log(res);
-          for (i = 0; i <= res.length; i++) {
+          for (i = 0; i < res.length; i++) {
             if (res !== undefined) {
               this.comment = {
                 user: res[i].user_name,
@@ -85,7 +83,6 @@ _comment   */
           }
       });
   }
-*/
 
   private clearFields() {
     this.comment.text = '';

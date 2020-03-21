@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HttpService {
-  apiRoot = 'http://localhost:3000';
+  apiRoot = 'http://192.168.178.31:3000/';
   response;
 
   constructor(private http: HttpClient) { }

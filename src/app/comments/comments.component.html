@@ -21,7 +21,7 @@
     <button class="btn btn-outline-dark" (click)="addComment(comment_user.value, comment_text.value)"
                                         (click)="comment_text.value=null"
                                         (click)="comment_user.value=null">Add</button>
-    <button class="btn btn-warning">HttpReq</button>
+    <button class="btn btn-warning" (click)="getCommentsFromDB()">HttpReq</button>
 </div>
 
 <div *ngFor="let x of comments; let i = index">
